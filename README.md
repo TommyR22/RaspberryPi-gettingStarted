@@ -23,9 +23,9 @@ A curated list of Raspberry Pi tools, projects, images and resources
 3. on raspberry: `mkdir -p ~/.ssh`.
 4. insert public key on raspberry: `cat ~/.ssh/id_rsa.pub<path_to_public_key> | ssh user_raspberry@<ip_raspberry> "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"`.
 5. disable password login ssh to avoid brute force access, edit file: `sudo nano /etc/ssh/sshd_config`.
-Edit this lines:
-`ChallengeResponseAuthentication no`
-`PasswordAuthentication no`(uncomment line)
-`UsePAM no`
+Edit this lines:\n
+`ChallengeResponseAuthentication no`\n
+`PasswordAuthentication no`(uncomment line)\n
+`UsePAM no`\n
 
 
