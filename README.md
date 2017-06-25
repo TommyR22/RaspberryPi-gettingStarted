@@ -5,7 +5,7 @@ A curated list of Raspberry Pi tools, projects, images and resources
 [RaspberryPi 3](https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/pi3_gpio.png)
 
 ### Resources
-[Connect using SSH](#Connect using SSH)
+[Connect using SSH](#Connect-using-SSH)
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse in turpis lacinia enim condimentum lacinia. Nullam viverra, purus imperdiet pharetra sollicitudin, libero diam molestie urna, vitae interdum arcu ex sed urna. Donec imperdiet orci tristique lectus vestibulum scelerisque. Pellentesque aliquet gravida consequat. Vivamus eu neque pharetra orci sagittis sollicitudin. Pellentesque dignissim mi lectus, quis mollis ligula sagittis non. Sed molestie rhoncus feugiat. Nulla vulputate diam in ligula eleifend, eget volutpat arcu efficitur. Proin bibendum pharetra diam. Maecenas posuere sit amet massa eu molestie. Donec egestas, tortor quis vulputate pretium, eros quam imperdiet nulla, a convallis turpis odio dictum ipsum. Sed facilisis ligula ut eros pharetra, sit amet viverra dui mollis. Pellentesque quis elit quis tellus pulvinar varius.
 
