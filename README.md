@@ -42,5 +42,5 @@ A curated list of Raspberry Pi tools, projects, images and resources
 
 
 ####Connect using SSH
-[ssh] Ciao
+[Connect using SSH] Ciao
 
