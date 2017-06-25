@@ -17,6 +17,5 @@ Mauris lobortis sapien in quam feugiat, efficitur euismod erat tincidunt. Donec 
 Quisque pulvinar ipsum sit amet sodales dignissim. Suspendisse bibendum orci eu ante congue bibendum. Ut consectetur nisl quis enim luctus, a fermentum risus rutrum. Ut nec hendrerit eros, et ultrices augue. Morbi semper nunc vel lectus porttitor venenatis. Nulla facilisi. Phasellus non purus nec mi finibus semper. Donec vitae dui sed nibh tempus varius ac id diam. Nullam aliquam sed nunc at ultrices. Donec orci odio, eleifend sit amet molestie eu, lobortis nec purus. Aliquam auctor nibh non orci tempus imperdiet. Sed eu rhoncus sem, eleifend placerat nunc. Fusce eget ullamcorper dui. Phasellus auctor, justo placerat ornare lacinia, augue eros pretium enim, vehicula tempor orci turpis et nunc. Proin accumsan enim id quam porta mollis.
 
 #### Connect using SSH
-[ciao](#ssh)
-Ciao
+[ciao] (#ssh)
 
