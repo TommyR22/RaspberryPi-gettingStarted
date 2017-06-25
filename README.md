@@ -36,8 +36,8 @@ UsePAM no
 `ssh user_raspberry@ip_raspberry -p <port_number>`
 
 ##### Ssh tips
-⋅⋅* Coping file from PC-to-Raspberry: `scp /path/to/local/file remote_user@remote_host:/path/to/remote/file` (ex:scp project.py pi@192.168.0.200:projects/).
-⋅⋅* Coping file from Raspberry-to-Pc: `scp remote_user@remote_host:/path/to/remote/file /path/to/local/file`.
+* Coping file from PC-to-Raspberry: `scp /path/to/local/file remote_user@remote_host:/path/to/remote/file` (ex:scp project.py pi@192.168.0.200:projects/).
+* Coping file from Raspberry-to-Pc: `scp remote_user@remote_host:/path/to/remote/file /path/to/local/file`.
 
 
 
