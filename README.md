@@ -9,8 +9,8 @@ A curated list of Raspberry Pi tools, projects, images and resources
 [raspberry-pi 3 schema](https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/pi3_gpio.png)
 
 ### Resources
-[Configure and connect using SSH](#configure-and-connect-using-ssh)
-
+* [Configure and connect using SSH](#configure-and-connect-using-ssh)
+* [Autorun python script on boot using systemd](#autorun-python-script-on-boot-using-systemd)
 ---
 
 #### Configure and connect using SSH
