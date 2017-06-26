@@ -47,21 +47,31 @@ UsePAM no
 ---
 
 #### Autorun python script on boot using systemd
-1. create config file service: `sudo nano /lib/systemd/system/name_of_service.service`.
+1. create config file service (**unit file**): `sudo nano /lib/systemd/system/name_of_service.service`.
 2. add following text: 
  ```
 [Unit]
 Description=My Script Service
 After=multi-user.target
+# The units listed in this directive will be started before starting the current unit.
+# multi-user is like runlevel 3, non graphical multi user mode with network.
+#Documentation=https://link_to_documentation.com
 
 [Service]
 Type=idle
+# idle = This indicates that the service will not be run until all jobs are dispatched
 ExecStart=/usr/bin/python /home/pi/name_of_script.py
+# this specifies the full path and the arguments of the command to be executed to start the process
 Restart=on-abort
+# This indicates the circumstances under which systemd will attempt to automatically restart the service.
 
 [Install]
 WantedBy=multi-user.target
+# states the target or targets that the service should be started under. 
+# systemctl list-units --type target (to list all currently loaded target units)
 ```
+[official documentation unit file](https://www.freedesktop.org/software/systemd/man/systemd.unit.html) 
+
 3. *OPTIONAL*: change the ExecStart with `ExecStart=/usr/bin/python /home/pi/name_of_script.py > /home/pi/name_of_script.log 2>&1` if you want to store output text in a log file.
 4. add permission to file: `sudo chmod 644 /lib/systemd/system/name_of_service.service`
 5. enable service and reboot raspberry: 
