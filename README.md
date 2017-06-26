@@ -4,7 +4,6 @@ A curated list of Raspberry Pi tools, projects, images and resources
 <p align="center">
   <img src="https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/raspberry_pi.png"/>
 </p>
-![alt text](https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/raspberry_pi.png)
 
 ### Gpio pinout
 [RaspberryPi 3](https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/pi3_gpio.png)
