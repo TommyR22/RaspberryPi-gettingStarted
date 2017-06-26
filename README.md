@@ -1,9 +1,9 @@
 # RaspberryPi-gettingStarted
 A curated list of Raspberry Pi tools, projects, images and resources
 
-<div style="text-align:center">
+<p align="center">
   <img src="https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/raspberry_pi.png"/>
-</div>
+</p>
 ![alt text](https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/raspberry_pi.png)
 
 ### Gpio pinout
