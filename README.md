@@ -14,6 +14,8 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 ### Resources
 * [Configure and connect using SSH](#configure-and-connect-using-ssh)
 * [Autorun python script on boot using systemd](#autorun-python-script-on-boot-using-systemd)
+* [Setup NGINX web server](#setup-nginx-web-server)
+* [Remote desktop](#remote-desktop)
 * [Tensorflow on raspberry](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
 
 ### Tutorials
@@ -93,6 +95,28 @@ sudo reboot
 * start service: `sudo systemctl start name_of_service.service`
 * stop service: `sudo systemctl stop name_of_service.service`
 * log systemd service: `sudo journalctl -f -u name_of_service.service`
+
+---
+
+#### Setup NGINX web server
+[NGINX official site](https://www.nginx.com/resources/wiki/)
+1. install web server : `sudo apt-get install nginx`.
+2. start server: `sudo /etc/init.d/nginx start`.
+3. see the example page browsing: `http://localhost` or `http://ip_raspberry` from another device within the network.
+* stop the server : `sudo /etc/init.d/nginx stop`.
+* NGINX defaults its web page location to `/var/www/html`.
+* config file : `sudo nano /etc/nginx/sites-available/default` where you can change port and root location.
+* restart server: `sudo service nginx restart`.
+
+---
+
+#### Remote desktop
+I'm using *tightvncserver*.
+1. install vcn: `sudo apt-get install tightvncserver`.
+2. `sudo apt-get remove xrdp`.This solve an issue during connection.
+3. `sudo apt-get install xrdp`.
+4. now you can connect with a remote desktop client using raspberry's ip.
+
 
 
 
