@@ -22,6 +22,7 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 ### Tutorials
 *In these tutorials I'm using [RPi.GPIO](https://pypi.python.org/pypi/RPi.GPIO) library for python*
 * [LED](#led)
+* [Temperature & Humidity sensor DHT11](https://github.com/TommyR22/RaspberryPi-gettingStarted/tree/master/tutorials/Temperature_Sensor_DHT11)
 
 ---
 
