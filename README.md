@@ -7,6 +7,7 @@ A curated list of Raspberry Pi tools, projects, images and resources
 
 ### Gpio pinout
 There are two ways of numbering the IO pins on a Raspberry Pi within RPi.GPIO. The first is using the BOARD numbering system. This refers to the pin numbers on the P1 header of the Raspberry Pi board. The advantage of using this numbering system is that your hardware will always work, regardless of the board revision of the RPi. You will not need to rewire your connector or change your code.
+
 The second numbering system is the BCM numbers. This is a lower level way of working - it refers to the channel numbers on the Broadcom SOC. You have to always work with a diagram of which channel number goes to which pin on the RPi board. Your script could break between revisions of Raspberry Pi boards.
 
 [raspberry-pi 3 schema](https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/pi3_gpio.png)
@@ -49,7 +50,7 @@ UsePAM no
 7. *OPTIONAL*: consider to change ssh port for more security in `/etc/ssh/sshd_config` file.
 
 ##### Connection via ssh
-`ssh user_raspberry@ip_raspberry -p <port_number>`
+`ssh user_raspberry@ip_raspberry -p <port_number>`.
 
 ##### Ssh tips
 * **Coping file from PC-to-Raspberry**: `scp /path/to/local/file remote_user@remote_host:/path/to/remote/file` (ex:scp project.py pi@192.168.0.200:projects/).
