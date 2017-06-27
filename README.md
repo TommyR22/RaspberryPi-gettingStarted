@@ -14,7 +14,7 @@ A curated list of Raspberry Pi tools, projects, images and resources
 * [Tensorflow on raspberry](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
 
 ### Tutorials
-**In these tutorials I'm using [RPi.GPIO](https://pypi.python.org/pypi/RPi.GPIO) library for python**
+*In these tutorials I'm using [RPi.GPIO](https://pypi.python.org/pypi/RPi.GPIO) library for python*
 * [LED](#led)
 
 ---
