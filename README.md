@@ -11,6 +11,7 @@ A curated list of Raspberry Pi tools, projects, images and resources
 ### Resources
 * [Configure and connect using SSH](#configure-and-connect-using-ssh)
 * [Autorun python script on boot using systemd](#autorun-python-script-on-boot-using-systemd)
+* [Tensorflow on raspberry](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
 ---
 
 #### Configure and connect using SSH
