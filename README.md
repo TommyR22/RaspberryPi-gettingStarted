@@ -24,6 +24,10 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 * [Led](https://github.com/TommyR22/RaspberryPi-gettingStarted/tree/master/tutorials/LED)
 * [Temperature & Humidity sensor DHT11](https://github.com/TommyR22/RaspberryPi-gettingStarted/tree/master/tutorials/Temperature_Sensor_DHT11)
 
+### Community
+* [Stackexchange](https://raspberrypi.stackexchange.com/)
+* [MagPi](https://www.raspberrypi.org/magpi/)
+
 ---
 
 #### Configure and connect using SSH
@@ -36,7 +40,7 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 6. Choose `Finish`.
 
 ##### Create SSH private/public key
-1. `ssh-keygen -t rsa -C "your_email@youremail.com"` and follow instructions.
+1. `ssh-keygen -t rsa -C "your_email@youremail.com"` and follow instructions. This will generate two new keys public and private. Never post the contens of private key anywhere, this could lead to a huge security hole in your machine.
 2. add key: `ssh-add -K <path_to_private_key>`. (ex: ~/.ssh/name_to_private_key)
 3. on raspberry: `mkdir -p ~/.ssh`.
 4. insert public key on raspberry: `cat ~/.ssh/id_rsa.pub<path_to_public_key> | ssh user_raspberry@<ip_raspberry> "mkdir -p ~/.ssh && cat >>  ~/.ssh/authorized_keys"`.
