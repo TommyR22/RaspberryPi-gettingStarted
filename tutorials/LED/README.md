@@ -15,7 +15,7 @@ and the signal repeats itself every 10 milliseconds. If the signal had a duty cy
 (.5X10 milliseconds= 5 milliseconds) and low 50% of the time (.5X10 milliseconds = 5 milliseconds).
 The Raspberry Pi can only simulate analog voltages between 0 and 3.3 volts because max output voltage is 3.3 v.It means that with a duty cycle of 100% we have 3.3v, with 50% 1.6v and with 0% 0v. So we can control led brightness or a motor's speed.
 
-![alt][https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/tutorials/LED/DutyCycle_WaveForms.png]
+![https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/tutorials/LED/DutyCycle_WaveForms.png]
 
 
 ##### PWM with Rpi.GPIO
