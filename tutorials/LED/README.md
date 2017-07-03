@@ -3,7 +3,7 @@
 * *led_pwm.py* - turn on led using PWM.
 
 #### PWM
-With **Pulse Width Modulation**(PWM) we can simulate analog voltages.
+**Pulse Width Modulation**(PWM) can simulate analog voltages.
 For many applications, such as controlling LED brightness, this approach works very well.
 The implementation requires you to think in terms of a signal with a frequency and a duty cycle.
 PWM is available as an output mode on the general-purpose I/O ports, controlled in either hardware or software (RPi.GPIO has only software).
