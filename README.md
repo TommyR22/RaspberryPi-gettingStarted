@@ -127,8 +127,30 @@ I'm using *tightvncserver*.
 
 ---
 
-#### Https with Certbot
+#### Https with certbot
 
-1. download [Certbot](https://certbot.eff.org/#debianjessie-nginx) for Debian 8(jessie)
+<p align="center">
+  <img src="https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/certbot.png"/>
+</p>
+Certbot is the next iteration of the Let's Encrypt Client; it obtains TLS/SSL certificates and can automatically configure HTTPS encryption on your server.
+
+Certbot communicates with the Let’s Encrypt CA through a protocol called ACME. While there are many ACME clients available to choose from, Certbot continues to be the most popular choice for organizations and developers that run their own webservers.
+
+1. Install [Certbot](https://certbot.eff.org/#debianjessie-nginx) for Debian 8(jessie). I suppose you have a web server like NGINX. 
+```
+wget https://dl.eff.org/certbot-auto
+chmod a+x certbot-auto
+```
+3. setup a server name on nginx: 
+`sudo nano /etc/nginx/sites-available/default`
+edit this line:`server_name www.your_domain_name.com;`
+
+2. certbot have some [plugins]https://certbot.eff.org/docs/using.html#getting-certificates-and-choosing-plugins) to automates both obtaining and installing certs. In this case I'm using NGINX's plugin:
+`sudo ./certbot-auto --nginx`
+
+Running this command will get a certificate for you and have Certbot edit your Nginx configuration automatically to serve it. If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, you can use the **certonly** subcommand.
+
+
+
 
 
