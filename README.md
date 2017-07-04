@@ -17,6 +17,7 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 * [Autorun python script on boot using systemd](#autorun-python-script-on-boot-using-systemd)
 * [Setup NGINX web server](#setup-nginx-web-server)
 * [Remote desktop](#remote-desktop)
+* [Https with CertBot](#https-with-certbot)
 * [Tensorflow on raspberry](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
 
 ### Tutorials
@@ -124,6 +125,10 @@ I'm using *tightvncserver*.
 3. `sudo apt-get install xrdp`.
 4. now you can connect with a remote desktop client using raspberry's ip.
 
+---
 
+#### Https with Certbot
+
+1. download [Certbot](https://certbot.eff.org/#debianjessie-nginx) for Debian 8(jessie)
 
 
