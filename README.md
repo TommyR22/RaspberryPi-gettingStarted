@@ -113,8 +113,8 @@ sudo reboot
 3. see the example page browsing: `http://localhost` or `http://ip_raspberry` from another device within the network.
 * stop the server : `sudo /etc/init.d/nginx stop`.
 * NGINX defaults its **web page location** to `/var/www/html`.
-* **config file** : `sudo nano /etc/nginx/sites-available/default` where you can change port and root location.
 * restart server: `sudo service nginx restart`.
+* **server config file** : `sudo nano /etc/nginx/sites-available/default` where you can change port and root location.
 * `cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup` to backup server configuration file.
 ##### nginx.conf
 ```
@@ -186,7 +186,7 @@ server {
         listen 80 default_server;
         listen [::]:80 default_server ipv6only=on;
 
-        root /usr/share/nginx/html;
+        root /var/www/html;
         index index.html index.htm;
 
         # Make site accessible from http://localhost/
