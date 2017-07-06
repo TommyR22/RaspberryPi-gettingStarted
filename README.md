@@ -115,6 +115,94 @@ sudo reboot
 * NGINX defaults its **web page location** to `/var/www/html`.
 * **config file** : `sudo nano /etc/nginx/sites-available/default` where you can change port and root location.
 * restart server: `sudo service nginx restart`.
+* `cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup` to backup server configuration file.
+##### nginx.conf
+```
+user www-data;
+worker_processes 4;
+pid /run/nginx.pid;
+
+events {
+        worker_connections 768;
+        # multi_accept on;
+}
+```
+**user** - Defines which Linux system user will own and run the nginx server. Most Debian-based distributions use www-data but this may be different in other distros. There are certain use cases that benefit from changing the user; for instance if you run two simultaneous web servers, or need another program’s user to have control over nginx.
+**worker_process** - Defines how many threads, or simultaneous instances, of nginx to run.
+**pid** - Defines where nginx will write its master process ID, or PID. The PID is used by the operating system to keep track of and send signals to the nginx process.
+
+```
+http {
+
+    ##
+    # Basic Settings
+    ##
+
+    sendfile on;
+    tcp_nopush on;
+    tcp_nodelay on;
+    keepalive_timeout 65;
+    types_hash_max_size 2048;
+    # server_tokens off;
+
+    # server_names_hash_bucket_size 64;
+    # server_name_in_redirect off;
+
+    include /etc/nginx/mime.types;
+    default_type application/octet-stream;
+
+    ##
+    # Logging Settings
+    ##
+
+    access_log /var/log/nginx/access.log;
+    error_log /var/log/nginx/error.log;
+
+    ##
+    # Gzip Settings
+    ##
+
+    gzip on;
+    gzip_disable "msie6";
+```
+**include** - The include statement at the beginning of this section includes the file *mime.types* located at */opt/nginx/conf/mime.types*.
+**gzip** - The gzip directive tells the server to use on-the-fly gzip compression to limit the amount of bandwidth used and speed up some transfers.
+```
+ ##
+        # Virtual Host Configs
+        ##
+
+        include /etc/nginx/conf.d/*.conf;
+        include /etc/nginx/sites-enabled/*;
+}
+```
+Virtual Hosts are used to run more than one website or domain off of a single server. Note: according to the nginx website, virtual hosts are called Server Blocks on the nginx.
+Nginx provides us with a layout for this file in the sites-available directory (/etc/nginx/sites-available), and we simply need to copy the text into a new custom file:
+`sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/example.com`
+
+Conf file `/etc/nginx/sites-available/default`:
+```
+server {
+        listen 80 default_server;
+        listen [::]:80 default_server ipv6only=on;
+
+        root /usr/share/nginx/html;
+        index index.html index.htm;
+
+        # Make site accessible from http://localhost/
+        server_name localhost;
+
+        location / {
+                # First attempt to serve request as file, then
+                # as directory, then fall back to displaying a 404.
+                try_files $uri $uri/ /index.html;
+                # Uncomment to enable naxsi on this location
+                # include /etc/nginx/naxsi.rules
+        }
+}
+```
+To enable log: `access_log /srv/www/example.com/logs/access.log;`
+
 
 ---
 
