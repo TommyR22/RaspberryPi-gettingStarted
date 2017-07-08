@@ -255,7 +255,11 @@ edit this line:`server_name www.your_domain_name.com;`
   <img src="https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/certbot_shell.png"/>
 </p>
 
-**NOTE**:probably you have to open port 443 on router to specify the tls-sni port to comunicate with certbot's server.
+**NOTE**:
+
+probably you have to open port 443 on router to specify the tls-sni port to comunicate with certbot's server.
+
+- The account credentials have been saved in Certbot configuration directory at **/etc/letsencrypt**. You should make a secure backup of this folder now. This configuration directory will also contain certificates and private keys obtained by Certbot so making regular backups of this folder is ideal.
 
 Running this command will get a certificate for you and have Certbot edit your Nginx configuration automatically to serve it. If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, you can use the **certonly** subcommand.
 
