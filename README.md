@@ -116,6 +116,12 @@ sudo reboot
 * restart server: `sudo service nginx restart`.
 * **server config file** : `sudo nano /etc/nginx/sites-available/default` where you can change port and root location.
 * `cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup` to backup server configuration file.
+* "Available" sites are all stored as individual configuration files inside the directory /etc/nginx/sites-available
+
+The *sites-available*folder is for storing all of your vhost configurations, whether or not they're currently enabled.
+
+The *sites-enabled* folder contains symlinks to files in the sites-available folder. This allows you to selectively disable vhosts by removing the symlink.
+
 ##### nginx.conf
 ```
 user www-data;
@@ -201,9 +207,10 @@ server {
         }
 }
 ```
-To enable log: `access_log /srv/www/example.com/logs/access.log;`
-
-
+To enable it we create a 'symbolic link' inside */etc/nginx/sites-enabled* to the file we just created:
+`sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com`
+To enable log: `access_log /srv/www/example.com/logs/access.log;`.
+To remove vhost: `sudo rm /etc/nginx/sites-enabled/default`
 ---
 
 #### Remote desktop
