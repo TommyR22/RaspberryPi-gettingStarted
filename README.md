@@ -193,6 +193,9 @@ server {
         listen [::]:80 default_server ipv6only=on;
 
         root /var/www/html;
+        access_log /var/www/appname/current/log/nginx.access.log;
+        error_log /var/www/appname/current/log/nginx.error.log info;
+  
         index index.html index.htm;
 
         # Make site accessible from http://localhost/
