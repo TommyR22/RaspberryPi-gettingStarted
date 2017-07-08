@@ -251,6 +251,10 @@ edit this line:`server_name www.your_domain_name.com;`
 3. certbot have some [plugins](https://certbot.eff.org/docs/using.html#getting-certificates-and-choosing-plugins) to automates both obtaining and installing certs. In this case I'm using NGINX's plugin:
 `sudo ./certbot-auto --nginx`
 
+<p align="center">
+  <img src="https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/certbot_shell.png"/>
+</p>
+
 **NOTE**:probably you have to open port 443 on router to specify the tls-sni port to comunicate with certbot's server.
 
 Running this command will get a certificate for you and have Certbot edit your Nginx configuration automatically to serve it. If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, you can use the **certonly** subcommand.
