@@ -186,7 +186,7 @@ Virtual Hosts are used to run more than one website or domain off of a single se
 Nginx provides us with a layout for this file in the sites-available directory (/etc/nginx/sites-available), and we simply need to copy the text into a new custom file:
 `sudo cp /etc/nginx/sites-available/default /etc/nginx/sites-available/example.com`
 
-Conf file `/etc/nginx/sites-available/default`:
+Server block(default) conf file `/etc/nginx/sites-available/default`:
 ```
 server {
         listen 80 default_server;
@@ -212,7 +212,6 @@ server {
 ```
 
 * To enable it we create a 'symbolic link' inside */etc/nginx/sites-enabled* to the file we just created:
-
 `sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com`
 
 * To enable log: `access_log /srv/www/example.com/logs/access.log;`
