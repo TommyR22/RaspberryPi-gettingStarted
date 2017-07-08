@@ -247,9 +247,11 @@ chmod a+x certbot-auto
 ```
 3. setup a server name on nginx: 
 `sudo nano /etc/nginx/sites-available/default`
+
 edit this line:`server_name www.your_domain_name.com;`
 
 2. certbot have some [plugins]https://certbot.eff.org/docs/using.html#getting-certificates-and-choosing-plugins) to automates both obtaining and installing certs. In this case I'm using NGINX's plugin:
+
 `sudo ./certbot-auto --nginx`
 
 Running this command will get a certificate for you and have Certbot edit your Nginx configuration automatically to serve it. If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, you can use the **certonly** subcommand.
