@@ -208,10 +208,10 @@ server {
 }
 ```
 
-To enable it we create a 'symbolic link' inside */etc/nginx/sites-enabled* to the file we just created:
-`sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com`
+To enable it we create a 'symbolic link' inside */etc/nginx/sites-enabled* to the file we just created:`sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com`
 To enable log: `access_log /srv/www/example.com/logs/access.log;`.
-To remove vhost: `sudo rm /etc/nginx/sites-enabled/default`
+To remove vhost: `sudo rm /etc/nginx/sites-enabled/default`.
+
 ---
 
 #### Remote desktop
