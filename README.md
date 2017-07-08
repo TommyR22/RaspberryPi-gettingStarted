@@ -32,7 +32,7 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 
 ---
 
-#### Configure and connect using SSH
+## Configure and connect using SSH
 ##### Enable ssh
 1. Enter `sudo raspi-config` in a terminal window.
 2. Select `Interfacing Options`.
@@ -65,7 +65,7 @@ UsePAM no
 
 ---
 
-#### Autorun python script on boot using systemd
+## Autorun python script on boot using systemd
 1. create config file service (**unit file**): `sudo nano /lib/systemd/system/name_of_service.service`.
 2. add following text: 
  ```
@@ -106,7 +106,7 @@ sudo reboot
 
 ---
 
-#### Setup NGINX web server
+## Setup NGINX web server
 [NGINX official site](https://www.nginx.com/resources/wiki/)
 1. install web server : `sudo apt-get install nginx`.
 2. start server: `sudo /etc/init.d/nginx start`.
@@ -222,7 +222,7 @@ server {
 
 ---
 
-#### Remote desktop
+## Remote desktop
 I'm using *tightvncserver*.
 1. install vcn: `sudo apt-get install tightvncserver`.
 2. `sudo apt-get remove xrdp`.This solve an issue for me.
@@ -231,7 +231,7 @@ I'm using *tightvncserver*.
 
 ---
 
-#### Https with certbot
+## Https with certbot
 
 <p align="center">
   <img src="https://github.com/TommyR22/RaspberryPi-gettingStarted/blob/master/images/certbot.png"/>
