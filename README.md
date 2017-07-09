@@ -115,6 +115,7 @@ sudo reboot
 * NGINX defaults its **web page location** to `/var/www/html`.
 * restart server: `sudo service nginx restart`.
 * **server config file** : `sudo nano /etc/nginx/sites-available/default` where you can change port and root location.
+* logs nginx service: `sudo nginx -c /etc/nginx/nginx.conf -t`
 * `cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.backup` to backup server configuration file.
 * "Available" sites are all stored as individual configuration files inside the directory /etc/nginx/sites-available
 
