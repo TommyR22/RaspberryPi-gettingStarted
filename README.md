@@ -193,8 +193,8 @@ server {
         listen [::]:80 default_server ipv6only=on;
 
         root /var/www/html;
-        access_log /var/www/appname/current/log/nginx.access.log;
-        error_log /var/www/appname/current/log/nginx.error.log info;
+        access_log /var/www/appname/log/nginx.access.log;
+        error_log /var/www/appname/log/nginx.error.log info;
   
         index index.html index.htm;
 
@@ -210,6 +210,7 @@ server {
         }
 }
 ```
+Only one of our server blocks on the server can have the **default_server** option enabled. This specifies which block should serve a request if the server_name requested does not match any of the available server blocks. This shouldn't happen very frequently in real world scenarios since visitors will be accessing your site through your domain name.
 
 * To enable it we create a 'symbolic link' inside */etc/nginx/sites-enabled* to the file we just created:
 `sudo ln -s /etc/nginx/sites-available/example.com /etc/nginx/sites-enabled/example.com`
