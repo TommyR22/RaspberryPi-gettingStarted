@@ -18,7 +18,6 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 * [Setup NGINX web server](#setup-nginx-web-server)
 * [Remote desktop](#remote-desktop)
 * [Https with CertBot](#https-with-certbot)
-* [Tensorflow on raspberry](https://github.com/samjabrahams/tensorflow-on-raspberry-pi)
 
 ### Tutorials
 *In these tutorials I'm using [RPi.GPIO](https://pypi.python.org/pypi/RPi.GPIO) library for python*
@@ -242,7 +241,7 @@ Certbot is the next iteration of the Let's Encrypt Client; it obtains TLS/SSL ce
 
 Certbot communicates with the Let’s Encrypt CA through a protocol called ACME. While there are many ACME clients available to choose from, Certbot continues to be the most popular choice for organizations and developers that run their own webservers.
 
-1. Install [Certbot](https://certbot.eff.org/#debianjessie-nginx) for Debian 8(jessie). I suppose you have a web server like NGINX. 
+1. Install [Certbot](https://certbot.eff.org/#debianjessie-nginx). I suppose you have a web server like NGINX. 
 ```
 wget https://dl.eff.org/certbot-auto
 chmod a+x certbot-auto
