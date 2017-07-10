@@ -228,7 +228,8 @@ I'm using *tightvncserver*.
 1. install vcn: `sudo apt-get install tightvncserver`.
 2. `sudo apt-get remove xrdp`.This solve an issue for me.
 3. `sudo apt-get install xrdp`.
-4. now you can connect with a remote desktop client using raspberry's ip.
+4. type on raspberry: `vncserver :<port>`, insert password.
+5. now you can connect with a remote desktop client typing: <ip raspberry>:<port>.
 
 ---
 
