@@ -270,7 +270,7 @@ The account credentials have been saved in Certbot configuration directory at **
 I've used **https://www.ssllabs.com/ssltest/** to test security. Overall rating of the site with certbot certificate is B because server supports weak Diffie-Hellman (DH) key exchange parameters. To solve this, we need to generate a new Diffie-Hellman group, regardless of the server software you use and we can use OpenSSL.
 
 1. `openssl dhparam -out dhparams.pem 2048`.
-2. nginx setting - update configuration server block in */etc/nginx/sites-enabled/<name_server>*:
+2. nginx setting - update configuration server block in */etc/letsencrypt/options-ssl-nginx.conf*:
 ```
 ssl_ciphers 'ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-AES256-GCM-SHA384:DHE-RSA-AES128-GCM-SHA256:DHE-DSS-AES128-GCM-SHA256:kEDH+AESGCM:ECDHE-RSA-AES128-SHA256:ECDHE-ECDSA-AES128-SHA256:ECDHE-RSA-AES128-SHA:ECDHE-ECDSA-AES128-SHA:ECDHE-RSA-AES256-SHA384:ECDHE-ECDSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:ECDHE-ECDSA-AES256-SHA:DHE-RSA-AES128-SHA256:DHE-RSA-AES128-SHA:DHE-DSS-AES128-SHA256:DHE-RSA-AES256-SHA256:DHE-DSS-AES256-SHA:DHE-RSA-AES256-SHA:AES128-GCM-SHA256:AES256-GCM-SHA384:AES128-SHA256:AES256-SHA256:AES128-SHA:AES256-SHA:AES:CAMELLIA:DES-CBC3-SHA:!aNULL:!eNULL:!EXPORT:!DES:!RC4:!MD5:!PSK:!aECDH:!EDH-DSS-DES-CBC3-SHA:!EDH-RSA-DES-CBC3-SHA:!KRB5-DES-CBC3-SHA';
 
