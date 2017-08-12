@@ -26,9 +26,11 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 * [Control GPIO using Telegram]()
 
 ### Usefull linux commands
-```sudo apt-get update
-
-sudo apt-get upgrade`
+```
+sudo apt-get update 
+sudo apt-get upgrade
+sudo apt-get dist-upgrade
+```
 
 `df -h` (Disk Free) - check free space on sd.
 
