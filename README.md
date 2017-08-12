@@ -30,6 +30,8 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 sudo apt-get update 
 sudo apt-get upgrade
 sudo apt-get dist-upgrade
+apt list --installed
+apt search package-name
 ```
 
 `df -h` (Disk Free) - check free space on sd.
