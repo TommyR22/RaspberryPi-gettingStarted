@@ -27,6 +27,7 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 
 ### Usefull linux commands
 `sudo apt-get update
+
 sudo apt-get upgrade`
 
 `df -h` (Disk Free) - check free space on sd.
