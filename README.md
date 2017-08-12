@@ -26,13 +26,13 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 * [Control GPIO using Telegram]()
 
 ### Usefull linux commands
-`**df -h**` (Disk Free) - check free space on sd.
+`df -h` (Disk Free) - check free space on sd.
 
-`**du -h**` (Disk usage) - check files dim.
+`du -h` (Disk usage) - check files dim.
 
-`**free**` - check RAM.
+`free` - check RAM.
 
-`**w**` - know who's logged in.
+`w` - know who's logged in.
 
 
 
