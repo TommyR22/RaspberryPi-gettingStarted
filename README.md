@@ -25,9 +25,17 @@ The second numbering system is the BCM numbers. This is a lower level way of wor
 * [Temperature & Humidity sensor DHT11](https://github.com/TommyR22/RaspberryPi-gettingStarted/tree/master/tutorials/Temperature_Sensor_DHT11)
 * [Control GPIO using Telegram]()
 
+### Usefull commands
+*df -h* (Disk Free) - check free space on sd.
+*du -h* (Disk usage) - check files dim.
+*free* - check RAM.
+*w* - know who's logged in.
+
+
 ### Community
 * [Stackexchange](https://raspberrypi.stackexchange.com/)
 * [MagPi](https://www.raspberrypi.org/magpi/)
+
 
 ---
 
