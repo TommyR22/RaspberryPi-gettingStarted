@@ -278,7 +278,8 @@ edit this line:`server_name www.your_domain_name.com;`
 
 Running this command will get a certificate for you and have Certbot edit your Nginx configuration automatically to serve it. If you're feeling more conservative and would like to make the changes to your Nginx configuration by hand, you can use the **certonly** subcommand.
 
-4. Certbot can be configured to renew your certificates automatically before they expire. Since Let's Encrypt certificates last for 90 days, it's highly advisable to take advantage of this feature. You can test automatic renewal for your certificates by running this command: `sudo ./path/to/certbot-auto renew --dry-run`
+4. Certbot can be configured to renew your certificates automatically before they expire. Since Let's Encrypt certificates last for 90 days, it's highly advisable to take advantage of this feature. You can test automatic renewal for your certificates by running this command: `sudo ./path/to/certbot-auto renew --dry-run`.
+If that appears to be working correctly, you can arrange for automatic renewal by adding a cron or systemd job which runs the following: `./path/to/certbot-auto renew --no-self-upgrade`
 
 **NOTE**:
 
